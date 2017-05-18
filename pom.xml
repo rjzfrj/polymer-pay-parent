@@ -219,7 +219,11 @@
 				<artifactId>mysql-connector-java</artifactId>
 				<version>${mysql.version}</version>
 			</dependency>
-
+			<dependency>
+				<groupId>org.oracle</groupId>
+				<artifactId>oracle</artifactId>
+				<version>10.2</version>
+			</dependency>
 			<dependency>
 				<groupId>commons-dbcp</groupId>
 				<artifactId>commons-dbcp</artifactId>
@@ -353,5 +357,6 @@
 	<modules>
 		<module>polymer-pay-common-core</module>
 		<module>polymer-pay-service</module>
+		<module>polymer-pay-web-mgt</module>
 	</modules>
 </project>

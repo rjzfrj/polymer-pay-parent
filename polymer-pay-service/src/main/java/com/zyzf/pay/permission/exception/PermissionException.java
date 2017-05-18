@@ -3,7 +3,6 @@ package com.zyzf.pay.permission.exception;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.zyzf.pay.account.exception.AccountBizException;
 import com.zyzf.pay.common.core.exception.BizException;
 
 /**
@@ -21,7 +20,7 @@ public class PermissionException extends BizException {
 	/** 分配菜单权限时，角色不能为空 **/
 	public static final Integer PERMISSION_ASSIGN_MENU_ROLE_NULL = 1003;
 	/** 对接平台用户体系异常 **/
-	public static final Integer RONCOO_NETWORK_EXCEPTION = 1004;
+	public static final Integer zyzf_NETWORK_EXCEPTION = 1004;
 
 	public PermissionException() {
 	}
