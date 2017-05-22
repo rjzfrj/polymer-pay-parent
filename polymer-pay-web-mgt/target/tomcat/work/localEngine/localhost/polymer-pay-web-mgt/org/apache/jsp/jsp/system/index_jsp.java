@@ -339,10 +339,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t<div class=\"page unitBox\">\n");
       out.write("\t\t\t\t\t\t<div class=\"accountInfo\">\n");
       out.write("\t\t\t\t\t\t\t<p>\n");
-      out.write("\t\t\t\t\t\t\t\t<span>支付后台</span>\n");
+      out.write("\t\t\t\t\t\t\t\t<span>管理后台</span>\n");
       out.write("\t\t\t\t\t\t\t</p>\n");
       out.write("\t\t\t\t\t\t\t<p>\n");
-      out.write("\t\t\t\t\t\t\t\t平台架构、业务流程请登录看视频教程 :<a href=\"http://\" target=\"_blank\">http://</a>\n");
+      out.write("\t\t\t\t\t\t\t\t欢迎！\n");
       out.write("\t\t\t\t\t\t\t</p>\n");
       out.write("\t\t\t\t\t\t</div>\n");
       out.write("\t\t\t\t\t</div>\n");

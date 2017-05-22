@@ -78,10 +78,10 @@
 					<div class="page unitBox">
 						<div class="accountInfo">
 							<p>
-								<span>支付后台</span>
+								<span>管理后台</span>
 							</p>
 							<p>
-								平台架构、业务流程请登录看视频教程 :<a href="http://" target="_blank">http://</a>
+								欢迎！
 							</p>
 						</div>
 					</div>

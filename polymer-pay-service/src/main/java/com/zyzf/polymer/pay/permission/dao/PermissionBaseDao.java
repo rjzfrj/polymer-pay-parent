@@ -18,7 +18,7 @@ import com.zyzf.polymer.pay.common.core.page.PageParam;
 public interface PermissionBaseDao<T> {
 
 	/**
-	 * 函数功能说明 ：单条插入数据. 修改者名字：Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ：单条插入数据. 
 	 * 
 	 * @参数：@param entity
 	 * @参数：@return
@@ -28,7 +28,7 @@ public interface PermissionBaseDao<T> {
 	int insert(T entity);
 
 	/**
-	 * 函数功能说明 ： 批量插入数据. 修改者名字：Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 批量插入数据. 
 	 * 
 	 * @参数：@param list
 	 * @参数：@return
@@ -38,7 +38,7 @@ public interface PermissionBaseDao<T> {
 	int insert(List<T> list);
 
 	/**
-	 * 函数功能说明 ：根据id单条更新数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ：根据id单条更新数据.
 	 * 
 	 * @参数：@param entity
 	 * @参数：@return
@@ -47,8 +47,14 @@ public interface PermissionBaseDao<T> {
 	 */
 	int update(T entity);
 
+	 /**
+	  * 说明：更具主键id修改 其他字段不为空的才会被修改
+	 * @param entity
+	 * @return：int
+	 */
+	int updateByPrimaryKeySelective(T entity);
 	/**
-	 * 函数功能说明 ： 根据id批量更新数据. 修改者名字：Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据id批量更新数据. 
 	 * 
 	 * @参数：@param list
 	 * @参数：@return
@@ -58,7 +64,7 @@ public interface PermissionBaseDao<T> {
 	int update(List<T> list);
 
 	/**
-	 * 函数功能说明 ： 根据column批量更新数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据column批量更新数据.
 	 * 
 	 * @参数：@param paramMap
 	 * @参数：@return
@@ -67,8 +73,9 @@ public interface PermissionBaseDao<T> {
 	 */
 	int update(Map<String, Object> paramMap);
 
+
 	/**
-	 * 函数功能说明 ： 根据id查询数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据id查询数据.
 	 * 
 	 * @参数：@param id
 	 * @参数：@return
@@ -78,7 +85,7 @@ public interface PermissionBaseDao<T> {
 	T getById(Long id);
 
 	/**
-	 * 函数功能说明 ： 根据column查询数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据column查询数据.
 	 * 
 	 * @参数：@param paramMap
 	 * @参数：@return
@@ -101,7 +108,7 @@ public interface PermissionBaseDao<T> {
 	public List<T> listBy(Map<String, Object> paramMap);
 
 	/**
-	 * 函数功能说明 ： 根据column查询列表数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据column查询列表数据.
 	 * 
 	 * @参数：@param paramMap
 	 * @参数：@return
@@ -111,7 +118,7 @@ public interface PermissionBaseDao<T> {
 	public List<T> listByColumn(Map<String, Object> paramMap);
 
 	/**
-	 * 函数功能说明 ： 根据column查询记录数. 修改者名字： Along 修改日期： 2016-1-9 修改内容：
+	 * 函数功能说明 ： 根据column查询记录数. 
 	 * 
 	 * @参数：@param paramMap
 	 * @参数：@return
@@ -121,7 +128,7 @@ public interface PermissionBaseDao<T> {
 	Long getCountByColumn(Map<String, Object> paramMap);
 
 	/**
-	 * 函数功能说明 ： 根据id删除数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据id删除数据.
 	 * 
 	 * @参数：@param id
 	 * @参数：@return
@@ -131,7 +138,7 @@ public interface PermissionBaseDao<T> {
 	int delete(Long id);
 
 	/**
-	 * 函数功能说明 ： 根据id批量删除数据. 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据id批量删除数据.
 	 * 
 	 * @参数：@param list
 	 * @参数：@return
@@ -141,7 +148,7 @@ public interface PermissionBaseDao<T> {
 	int delete(List<T> list);
 
 	/**
-	 * 函数功能说明 ： 根据column批量删除数据. 修改者名字：Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 根据column批量删除数据. 
 	 * 
 	 * @参数：@param paramMap
 	 * @参数：@return
@@ -151,7 +158,7 @@ public interface PermissionBaseDao<T> {
 	int delete(Map<String, Object> paramMap);
 
 	/**
-	 * 函数功能说明 ： 分页查询数据 . 修改者名字： Along 修改日期： 2016-5-11 修改内容：
+	 * 函数功能说明 ： 分页查询数据 .
 	 * 
 	 * @参数：@param pageParam
 	 * @参数：@param paramMap

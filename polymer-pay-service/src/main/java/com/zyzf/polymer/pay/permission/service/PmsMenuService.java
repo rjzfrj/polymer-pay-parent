@@ -81,6 +81,13 @@ public interface PmsMenuService {
 	 * @param menu
 	 */
 	public void update(PmsMenu menu);
+	
+	/**
+	 * 更新菜单.
+	 * 
+	 * @param menu
+	 */
+	public int updateByIdSelective(PmsMenu menu);
 
 	/**
 	 * 根据角色查找角色对应的菜单ID集

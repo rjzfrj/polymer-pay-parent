@@ -9,8 +9,6 @@ import javax.servlet.ServletResponse;
  * 自定义form表单认证过滤器<br/>
  * 目的是：验证码过滤器发现验证码错误，不需要做认证过滤
  *
- * ：
- * 
  * 
  */
 public class RcFormAuthenticationFilter extends FormAuthenticationFilter {

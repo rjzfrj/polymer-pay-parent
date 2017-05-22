@@ -137,7 +137,7 @@ public class PmsMenuController extends BaseController {
 				parentMenu.setId(0L);
 			}
 			menu.setParent(parentMenu);
-			pmsMenuService.update(menu);
+			pmsMenuService.updateByIdSelective(menu);
 			// 记录系统操作日志
 			return operateSuccess(model, dwz);
 		} catch (Exception e) {

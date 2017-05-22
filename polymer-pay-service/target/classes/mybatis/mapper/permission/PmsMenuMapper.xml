@@ -23,10 +23,11 @@
 		#{status,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR},
 		#{isLeaf,jdbcType=VARCHAR},
 		#{lvl,jdbcType=DECIMAL},
-		#{parentId,jdbcType=DECIMAL}, #{targetName,jdbcType=VARCHAR},
+		#{parent.id,jdbcType=DECIMAL}, #{targetName,jdbcType=VARCHAR},
 		#{num,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
 		#{url,jdbcType=VARCHAR})
 	</insert>
+	
 	<!-- <update id="update" parameterType="com.zyzf.polymer.pay.permission.entity.PmsMenu"> 
 		update <include refid="pms_menu" /> <set> ver = #{ver}+1, name = #{name,jdbcType=VARCHAR}, 
 		url = #{url,jdbcType=VARCHAR}, parent_id = #{parent.id,jdbcType=INTEGER}, 
@@ -69,8 +70,8 @@
 			<if test="lvl != null">
 				LVL = #{lvl,jdbcType=DECIMAL},
 			</if>
-			<if test="parentId != null">
-				PARENT_ID = #{parentId,jdbcType=DECIMAL},
+			<if test="parent.id != null">
+				PARENT_ID = #{parent.id,jdbcType=DECIMAL},
 			</if>
 			<if test="targetName != null">
 				TARGET_NAME = #{targetName,jdbcType=VARCHAR},
@@ -98,7 +99,7 @@
 		REMARK = #{remark,jdbcType=VARCHAR},
 		IS_LEAF = #{isLeaf,jdbcType=VARCHAR},
 		LVL = #{lvl,jdbcType=DECIMAL},
-		PARENT_ID = #{parentId,jdbcType=DECIMAL},
+		PARENT_ID = #{parent.id,jdbcType=DECIMAL},
 		TARGET_NAME = #{targetName,jdbcType=VARCHAR},
 		NUM = #{num,jdbcType=VARCHAR},
 		NAME = #{name,jdbcType=VARCHAR},

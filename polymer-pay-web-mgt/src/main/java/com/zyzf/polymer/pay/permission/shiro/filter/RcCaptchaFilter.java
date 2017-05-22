@@ -21,7 +21,6 @@ import org.springframework.web.filter.OncePerRequestFilter;
  * 1.可以自建image <br/>
  * 2.调用JCaptcha.captchaService.getImageChallengeForID(id),第三方jar包生成
  *
- * ：
  * 
  * 
  */

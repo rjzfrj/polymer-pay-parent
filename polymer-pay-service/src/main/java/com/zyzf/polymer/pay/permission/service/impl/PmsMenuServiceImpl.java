@@ -127,4 +127,9 @@ public class PmsMenuServiceImpl implements PmsMenuService {
 		return menuIds.toString();
 
 	}
+
+	@Override
+	public int updateByIdSelective(PmsMenu menu) {
+		return zyppMenuDao.updateByPrimaryKeySelective(menu);
+	}
 }
