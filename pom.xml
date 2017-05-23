@@ -358,5 +358,6 @@
 		<module>polymer-pay-common-core</module>
 		<module>polymer-pay-service</module>
 		<module>polymer-pay-web-mgt</module>
+  		<module>polymer-pay-document</module>
 	</modules>
 </project>
