@@ -3,6 +3,7 @@ package com.zyzf.polymer.pay.permission.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 import com.zyzf.polymer.pay.permission.entity.PmsMenu;
 
 /**
@@ -12,7 +13,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsMenu;
  * 
  * 
  */
-public interface PmsMenuDao extends PermissionBaseDao<PmsMenu> {
+public interface PmsMenuDao extends BaseDao<PmsMenu> {
 	/**
 	 * 根据角色id查找菜单列表
 	 * 

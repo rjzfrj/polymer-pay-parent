@@ -1,5 +1,7 @@
 package com.zyzf.polymer.pay.permission.entity;
 
+import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
+
 /**
  * 权限管理-角色..
  *
@@ -7,7 +9,7 @@ package com.zyzf.polymer.pay.permission.entity;
  * 
  * 
  */
-public class PmsRole extends PermissionBaseEntity {
+public class PmsRole extends BaseEntity {
 
 	private static final long serialVersionUID = -1850274607153125161L;
 	private String roleCode; // 角色编码：例如：admin

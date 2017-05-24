@@ -1,5 +1,7 @@
 package com.zyzf.polymer.pay.permission.entity;
 
+import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
+
 /**
  * 权限管理-操作员
  *
@@ -7,7 +9,7 @@ package com.zyzf.polymer.pay.permission.entity;
  * 
  * 
  */
-public class PmsOperator extends PermissionBaseEntity {
+public class PmsOperator extends BaseEntity {
 
 	/**
 	 * 

@@ -2,6 +2,7 @@ package com.zyzf.polymer.pay.permission.dao;
 
 import java.util.List;
 
+import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 import com.zyzf.polymer.pay.permission.entity.PmsMenuRole;
 
 /**
@@ -11,7 +12,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsMenuRole;
  * 
  * 
  */
-public interface PmsMenuRoleDao extends PermissionBaseDao<PmsMenuRole> {
+public interface PmsMenuRoleDao extends BaseDao<PmsMenuRole> {
 
 	/**
 	 * 根据角色ID删除菜单与角色的关联记录.

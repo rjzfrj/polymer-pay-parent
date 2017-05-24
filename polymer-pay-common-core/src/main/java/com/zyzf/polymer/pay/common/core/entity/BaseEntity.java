@@ -6,7 +6,7 @@ import com.zyzf.polymer.pay.common.core.utils.StringUtil;
 
 public class BaseEntity {
 
-	private String id = StringUtil.get32UUID();// 主键ID.
+	private Long id; // 主键ID.
 	private Integer ver = 0;// 版本号默认为0
 	private String status;// 状态 PublicStatusEnum
 	private String creater;// 创建人.
@@ -15,11 +15,11 @@ public class BaseEntity {
 	private Date editTime;// 修改时间.
 	private String remark;// 描述
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

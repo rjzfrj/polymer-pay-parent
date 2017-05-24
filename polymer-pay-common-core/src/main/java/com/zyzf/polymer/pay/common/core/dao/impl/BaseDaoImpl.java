@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
@@ -22,7 +23,8 @@ import com.zyzf.polymer.pay.common.core.page.PageParam;
  * 据访问层基础支撑类.
  * 
  */
-public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport implements BaseDao<T> {
+@Repository("baseDao")
+public  class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport implements BaseDao<T> {
 
     protected static final Log LOG = LogFactory.getLog(BaseDaoImpl.class);
 
@@ -31,6 +33,7 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
     public static final String SQL_UPDATE_BY_ID = "updateByPrimaryKey";
     public static final String SQL_BATCH_UPDATE_BY_IDS = "batchUpdateByIds";
     public static final String SQL_BATCH_UPDATE_BY_COLUMN = "batchUpdateByColumn";
+	public static final String SQL_UPDATE_BY_PRIMARYKEY_SELECTIVE = "updateByPrimaryKeySelective";
     public static final String SQL_SELECT_BY_ID = "selectByPrimaryKey";
     public static final String SQL_LIST_BY_COLUMN = "listByColumn";
     public static final String SQL_COUNT_BY_COLUMN = "getCountByColumn";
@@ -98,6 +101,15 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
         }
         return result;
     }
+    /**根据id单条有选择的更新不为空的字段.**/
+	public int updateByPrimaryKeySelective(T entity) {
+		entity.setEditTime(new Date());
+		int result = sessionTemplate.update(getStatement(SQL_UPDATE_BY_PRIMARYKEY_SELECTIVE), entity);
+		if (result <= 0) {
+			throw BizException.DB_UPDATE_RESULT_0.newInstance("数据库操作,updateByPrimaryKeySelective返回0.{%s}", getStatement(SQL_UPDATE_BY_ID));
+		}
+		return result;
+	}
 
     /**
      * 根据id批量更新数据.
@@ -133,6 +145,13 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
     public T getById(String id) {
         return sessionTemplate.selectOne(getStatement(SQL_SELECT_BY_ID), id);
     }
+    
+	/**
+	 * 根据id查询数据.
+	 */
+	public T getById(Long id) {
+		return sessionTemplate.selectOne(getStatement(SQL_SELECT_BY_ID), id);
+	}
 
     /**
      * 根据column查询数据.
@@ -191,6 +210,13 @@ public abstract class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSup
      * 根据id删除数据.
      */
     public int delete(String id) {
+        return (int) sessionTemplate.delete(getStatement(SQL_DELETE_BY_ID), id);
+    }
+    
+    /**
+     * 根据id删除数据.
+     */
+    public int delete(Long id) {
         return (int) sessionTemplate.delete(getStatement(SQL_DELETE_BY_ID), id);
     }
 

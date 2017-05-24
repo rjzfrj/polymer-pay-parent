@@ -21,18 +21,18 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsRoleDao;
 import com.zyzf.polymer.pay.permission.entity.PmsRole;
 
 /**
  * 权限角色dao实现
  *
- * ：
  * 
  * 
  */
 @Repository
-public class PmsRoleDaoImpl extends PermissionBaseDaoImpl<PmsRole> implements PmsRoleDao {
+public class PmsRoleDaoImpl extends BaseDaoImpl<PmsRole> implements PmsRoleDao {
 
 	/**
 	 * 获取所有角色列表，以供添加操作员时选择.

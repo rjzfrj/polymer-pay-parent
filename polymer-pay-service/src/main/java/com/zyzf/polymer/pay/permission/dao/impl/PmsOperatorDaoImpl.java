@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsOperatorDao;
 import com.zyzf.polymer.pay.permission.entity.PmsOperator;
 
@@ -15,7 +16,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsOperator;
  * 
  */
 @Repository
-public class PmsOperatorDaoImpl extends PermissionBaseDaoImpl<PmsOperator> implements PmsOperatorDao {
+public class PmsOperatorDaoImpl extends BaseDaoImpl<PmsOperator> implements PmsOperatorDao {
 
 	/**
 	 * 根据操作员登录名获取操作员信息.

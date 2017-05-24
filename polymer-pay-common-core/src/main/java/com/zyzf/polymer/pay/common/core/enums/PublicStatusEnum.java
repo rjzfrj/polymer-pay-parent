@@ -2,6 +2,7 @@ package com.zyzf.polymer.pay.common.core.enums;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -44,6 +45,8 @@ public enum PublicStatusEnum {
 		}
 		return enumMap;
 	}
+	
+	
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static List toList() {
@@ -85,5 +88,13 @@ public enum PublicStatusEnum {
 		jsonStr.append("]");
 		return jsonStr.toString();
 	}
+	
+	public static void main(String[] args) {
+		Map<String, String> enumMap = new HashMap<String,String>();
+		enumMap.put("123", "ABC");
+		enumMap.put("456", "AAA");
+		System.out.println(enumMap);
+		
+	} 
 
 }

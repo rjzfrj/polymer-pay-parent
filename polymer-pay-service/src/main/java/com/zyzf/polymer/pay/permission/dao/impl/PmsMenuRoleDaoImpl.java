@@ -19,6 +19,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsMenuRoleDao;
 import com.zyzf.polymer.pay.permission.entity.PmsMenuRole;
 
@@ -30,7 +31,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsMenuRole;
  * 
  */
 @Repository("pmsRoleMenuDao")
-public class PmsMenuRoleDaoImpl extends PermissionBaseDaoImpl<PmsMenuRole> implements PmsMenuRoleDao {
+public class PmsMenuRoleDaoImpl extends BaseDaoImpl<PmsMenuRole> implements PmsMenuRoleDao {
 
 	@Override
 	public void deleteByRoleId(Long roleId) {

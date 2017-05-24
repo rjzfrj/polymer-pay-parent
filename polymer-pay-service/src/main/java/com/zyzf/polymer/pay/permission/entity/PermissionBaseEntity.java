@@ -22,6 +22,9 @@ public class PermissionBaseEntity implements Serializable {
 	private Date editTime;// 修改时间.
 	private String remark;// 描述
 
+	
+	
+	
 	public Long getId() {
 		return id;
 	}

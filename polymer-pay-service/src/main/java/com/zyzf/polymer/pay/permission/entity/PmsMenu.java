@@ -1,5 +1,7 @@
 package com.zyzf.polymer.pay.permission.entity;
 
+import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
+
 /**
  * 菜单实体
  *
@@ -7,7 +9,7 @@ package com.zyzf.polymer.pay.permission.entity;
  * 
  * 
  */
-public class PmsMenu extends PermissionBaseEntity {
+public class PmsMenu extends BaseEntity {
 	private static final long serialVersionUID = 1L;
 
 	/** 菜单名称 **/

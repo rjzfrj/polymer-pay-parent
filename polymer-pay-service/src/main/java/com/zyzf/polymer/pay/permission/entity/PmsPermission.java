@@ -1,5 +1,7 @@
 package com.zyzf.polymer.pay.permission.entity;
 
+import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
+
 /**
  * 权限-权限表实体..
  * 
@@ -7,7 +9,7 @@ package com.zyzf.polymer.pay.permission.entity;
  * 
  * 
  */
-public class PmsPermission extends PermissionBaseEntity {
+public class PmsPermission extends BaseEntity {
 
 	private static final long serialVersionUID = -2175597348886393330L;
 	private String permissionName; // 权限名称

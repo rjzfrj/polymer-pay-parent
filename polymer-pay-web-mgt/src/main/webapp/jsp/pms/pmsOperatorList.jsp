@@ -80,7 +80,7 @@
 					<td>${item.mobileNo }</td>
 					<td>
 						<c:forEach items="${OperatorStatusEnum}" var="operatorStatus">
-							<c:if test="${item.status eq operatorStatus.value}">${operatorStatus.desc}</c:if>
+							<c:if test="${item.status eq operatorStatus.key}">${operatorStatus.value.desc}</c:if>
 						</c:forEach>
 					</td>
 

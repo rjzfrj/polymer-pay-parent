@@ -21,6 +21,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsMenuDao;
 import com.zyzf.polymer.pay.permission.entity.PmsMenu;
 
@@ -32,7 +33,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsMenu;
  * 
  */
 @Repository("pmsMenuDao")
-public class PmsMenuDaoImpl extends PermissionBaseDaoImpl<PmsMenu> implements PmsMenuDao {
+public class PmsMenuDaoImpl extends BaseDaoImpl<PmsMenu> implements PmsMenuDao {
 
 	@SuppressWarnings("rawtypes")
 	@Override
@@ -78,5 +79,7 @@ public class PmsMenuDaoImpl extends PermissionBaseDaoImpl<PmsMenu> implements Pm
 	public List<PmsMenu> getMenuByNameAndIsLeaf(Map<String, Object> map) {
 		return super.getSqlSession().selectList(getStatement("listBy"), map);
 	}
+
+
 
 }

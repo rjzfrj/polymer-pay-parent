@@ -22,18 +22,18 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsPermissionDao;
 import com.zyzf.polymer.pay.permission.entity.PmsPermission;
 
 /**
  * 权限功能点dao实现
  *
- * ：
  * 
  * 
  */
 @Repository
-public class PmsPermissionDaoImpl extends PermissionBaseDaoImpl<PmsPermission> implements PmsPermissionDao {
+public class PmsPermissionDaoImpl extends BaseDaoImpl<PmsPermission> implements PmsPermissionDao {
 
 	/**
 	 * 根据实体ID集字符串获取对象列表.

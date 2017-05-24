@@ -21,6 +21,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsOperatorRoleDao;
 import com.zyzf.polymer.pay.permission.entity.PmsOperatorRole;
 
@@ -32,7 +33,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsOperatorRole;
  * 
  */
 @Repository
-public class PmsOperatorRoleDaoImpl extends PermissionBaseDaoImpl<PmsOperatorRole> implements PmsOperatorRoleDao {
+public class PmsOperatorRoleDaoImpl extends BaseDaoImpl<PmsOperatorRole> implements PmsOperatorRoleDao {
 
 	/**
 	 * 根据操作员ID查找该操作员关联的角色.
@@ -91,5 +92,6 @@ public class PmsOperatorRoleDaoImpl extends PermissionBaseDaoImpl<PmsOperatorRol
 		paramMap.put("operatorId", operatorId);
 		super.getSqlSession().delete(getStatement("deleteByRoleIdAndOperatorId"), paramMap);
 	}
+
 
 }

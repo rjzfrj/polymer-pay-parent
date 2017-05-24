@@ -241,7 +241,7 @@ public class LoginController extends BaseController {
 				treeBuf.append("</div>");
 			}
 		}
-
+		
 	}
 
 	/**
@@ -267,5 +267,6 @@ public class LoginController extends BaseController {
 		}
 		return sonMenuList;
 	}
+	
 
 }
