@@ -10,6 +10,7 @@ import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.authc.LockedAccountException;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UnknownAccountException;
+import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
@@ -77,11 +78,12 @@ public class OperatorRealm extends AuthorizingRealm {
 	@Override
 	// 验证的核心方法
 	protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
-
 		String loginName = (String) token.getPrincipal();
 		if (StringUtils.isEmpty(loginName.trim())) {
 			throw new UnknownAccountException();// 没找到帐号
 		}
+		UsernamePasswordToken to=(UsernamePasswordToken)token;
+		to.getUsername();
 
 		// 根据登录名查询操作员
 		PmsOperator operator = pmsOperatorService.findOperatorByLoginName(loginName);

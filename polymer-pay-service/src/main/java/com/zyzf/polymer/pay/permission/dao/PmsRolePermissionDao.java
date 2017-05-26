@@ -2,6 +2,7 @@ package com.zyzf.polymer.pay.permission.dao;
 
 import java.util.List;
 
+import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 import com.zyzf.polymer.pay.permission.entity.PmsRolePermission;
 
 /**
@@ -10,7 +11,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsRolePermission;
  * 
  * 
  */
-public interface PmsRolePermissionDao extends PermissionBaseDao<PmsRolePermission> {
+public interface PmsRolePermissionDao extends BaseDao<PmsRolePermission> {
 
 	/**
 	 * 根据角色ID找到角色关联的权限点.

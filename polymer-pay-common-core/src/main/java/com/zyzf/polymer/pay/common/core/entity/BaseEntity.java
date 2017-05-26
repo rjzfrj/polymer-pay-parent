@@ -2,8 +2,6 @@ package com.zyzf.polymer.pay.common.core.entity;
 
 import java.util.Date;
 
-import com.zyzf.polymer.pay.common.core.utils.StringUtil;
-
 public class BaseEntity {
 
 	private Long id; // 主键ID.

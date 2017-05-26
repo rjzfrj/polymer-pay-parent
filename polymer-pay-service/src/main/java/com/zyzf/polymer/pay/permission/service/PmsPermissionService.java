@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.zyzf.polymer.pay.common.core.page.PageBean;
 import com.zyzf.polymer.pay.common.core.page.PageParam;
+import com.zyzf.polymer.pay.common.core.service.BaseService;
 import com.zyzf.polymer.pay.permission.entity.PmsPermission;
 
 /**
@@ -13,7 +14,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsPermission;
  * 
  * 
  */
-public interface PmsPermissionService {
+public interface PmsPermissionService extends BaseService<PmsPermission> {
 
 	/**
 	 * 创建pmsPermission

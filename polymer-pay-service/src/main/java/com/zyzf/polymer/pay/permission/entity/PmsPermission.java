@@ -9,7 +9,7 @@ import com.zyzf.polymer.pay.common.core.entity.BaseEntity;
  * 
  * 
  */
-public class PmsPermission extends BaseEntity {
+public class PmsPermission extends BaseEntity implements java.io.Serializable {
 
 	private static final long serialVersionUID = -2175597348886393330L;
 	private String permissionName; // 权限名称

@@ -6,6 +6,30 @@
 	<sql id="pms_role"> PMS_ROLE </sql>
 	<sql id="pms_role_menu"> PMS_MENU_ROLE </sql>
 
+<!-- 	<resultMap id="BaseResultMapPmsMenu"
+		type="com.zyzf.polymer.pay.permission.entity.PmsMenu">
+		<id column="ID" property="id" jdbcType="DECIMAL" />
+		<result column="VER" property="ver" jdbcType="DECIMAL" />
+		<result column="CREATER" property="creater" jdbcType="VARCHAR" />
+		<result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="EDITOR" property="editor" jdbcType="VARCHAR" />
+		<result column="EDIT_TIME" property="editTime" jdbcType="TIMESTAMP" />
+		<result column="STATUS" property="status" jdbcType="VARCHAR" />
+		<result column="REMARK" property="remark" jdbcType="VARCHAR" />
+		<result column="IS_LEAF" property="isLeaf" jdbcType="VARCHAR" />
+		<result column="LVL" property="lvl" jdbcType="DECIMAL" />
+		<result column="PARENT_ID" property="parent" jdbcType="DECIMAL" />
+		<result column="TARGET_NAME" property="targetName" jdbcType="VARCHAR" />
+		<result column="NUM" property="num" jdbcType="VARCHAR" />
+		<result column="NAME" property="name" jdbcType="VARCHAR" />
+		<result column="URL" property="url" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		ID, VER, CREATER, CREATE_TIME, EDITOR, EDIT_TIME, STATUS, REMARK,
+		IS_LEAF, LVL, PARENT_ID,
+		TARGET_NAME, NUM, NAME, URL
+	</sql> -->
 	<insert id="insert" parameterType="com.zyzf.polymer.pay.permission.entity.PmsMenu"
 		keyProperty="id" useGeneratedKeys="true">
 		<selectKey keyProperty="id" order="BEFORE" resultType="java.lang.Long">
@@ -27,7 +51,7 @@
 		#{num,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR},
 		#{url,jdbcType=VARCHAR})
 	</insert>
-	
+
 	<!-- <update id="update" parameterType="com.zyzf.polymer.pay.permission.entity.PmsMenu"> 
 		update <include refid="pms_menu" /> <set> ver = #{ver}+1, name = #{name,jdbcType=VARCHAR}, 
 		url = #{url,jdbcType=VARCHAR}, parent_id = #{parent.id,jdbcType=INTEGER}, 
@@ -91,21 +115,42 @@
 	<update id="updateByPrimaryKey" parameterType="com.zyzf.polymer.pay.permission.entity.PmsMenu">
 		update PMS_MENU
 		set VER = #{ver,jdbcType=DECIMAL}+1,
-		CREATER = #{creater,jdbcType=VARCHAR},
-		CREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+		CREATER =
+		#{creater,jdbcType=VARCHAR},
+		CREATE_TIME =
+		#{createTime,jdbcType=TIMESTAMP},
 		EDITOR = #{editor,jdbcType=VARCHAR},
 		EDIT_TIME = #{editTime,jdbcType=TIMESTAMP},
-		STATUS = #{status,jdbcType=VARCHAR},
+		STATUS =
+		#{status,jdbcType=VARCHAR},
 		REMARK = #{remark,jdbcType=VARCHAR},
 		IS_LEAF = #{isLeaf,jdbcType=VARCHAR},
 		LVL = #{lvl,jdbcType=DECIMAL},
 		PARENT_ID = #{parent.id,jdbcType=DECIMAL},
-		TARGET_NAME = #{targetName,jdbcType=VARCHAR},
+		TARGET_NAME =
+		#{targetName,jdbcType=VARCHAR},
 		NUM = #{num,jdbcType=VARCHAR},
-		NAME = #{name,jdbcType=VARCHAR},
+		NAME =
+		#{name,jdbcType=VARCHAR},
 		URL = #{url,jdbcType=VARCHAR}
-		where ID = #{id,jdbcType=DECIMAL} and VER = #{ver,jdbcType=DECIMAL}
+		where ID =
+		#{id,jdbcType=DECIMAL} and VER = #{ver,jdbcType=DECIMAL}
 	</update>
+<!-- 	<select id="selectByPrimaryKey" parameterType="Long"
+		resultMap="BaseResultMapPmsMenu">
+		select
+		 d.ID, d.VER, d.CREATER, d.CREATE_TIME, d.EDITOR, d.EDIT_TIME, d.STATUS, d.REMARK,
+		d.IS_LEAF, d.LVL, d.PARENT_ID,
+		d.TARGET_NAME, d.NUM, d.NAME, d.URL
+		from
+		 <include refid="pms_menu" />
+		d
+		 left join
+		<include refid="pms_menu" />
+		parent
+		on d.PARENT_ID = parent.id
+		where d.id = #{id}
+	</select> -->
 	<select id="selectByPrimaryKey" parameterType="Long"
 		resultType="com.zyzf.polymer.pay.permission.entity.PmsMenu">
 		select
@@ -120,8 +165,8 @@
 		parent.name as "parent.name",
 		d.num as
 		"num",
-		d.is_leaf as "isLeaf",
-		d.lvl as "lvl",
+		d.is_leaf as isLeaf,
+		d.lvl as lvl,
 		d.target_name as
 		"targetName"
 		from

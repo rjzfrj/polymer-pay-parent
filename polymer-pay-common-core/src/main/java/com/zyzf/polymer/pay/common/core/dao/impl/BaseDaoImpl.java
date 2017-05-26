@@ -24,7 +24,7 @@ import com.zyzf.polymer.pay.common.core.page.PageParam;
  * 
  */
 @Repository("baseDao")
-public  class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport implements BaseDao<T> {
+public  class BaseDaoImpl<T> extends SqlSessionDaoSupport implements BaseDao<T> {
 
     protected static final Log LOG = LogFactory.getLog(BaseDaoImpl.class);
 
@@ -94,7 +94,7 @@ public  class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport imp
      * 根据id单条更新数据.
      */
     public int update(T entity) {
-        entity.setEditTime(new Date());
+       // entity.setEditTime(new Date());
         int result = sessionTemplate.update(getStatement(SQL_UPDATE_BY_ID), entity);
         if (result <= 0) {
             throw BizException.DB_UPDATE_RESULT_0.newInstance("数据库操作,updateByPrimaryKey返回0.{%s}", getStatement(SQL_UPDATE_BY_ID));
@@ -103,7 +103,7 @@ public  class BaseDaoImpl<T extends BaseEntity> extends SqlSessionDaoSupport imp
     }
     /**根据id单条有选择的更新不为空的字段.**/
 	public int updateByPrimaryKeySelective(T entity) {
-		entity.setEditTime(new Date());
+		//entity.setEditTime(new Date());
 		int result = sessionTemplate.update(getStatement(SQL_UPDATE_BY_PRIMARYKEY_SELECTIVE), entity);
 		if (result <= 0) {
 			throw BizException.DB_UPDATE_RESULT_0.newInstance("数据库操作,updateByPrimaryKeySelective返回0.{%s}", getStatement(SQL_UPDATE_BY_ID));

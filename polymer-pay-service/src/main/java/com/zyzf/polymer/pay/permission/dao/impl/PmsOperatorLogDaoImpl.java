@@ -17,6 +17,7 @@ package com.zyzf.polymer.pay.permission.dao.impl;
 
 import org.springframework.stereotype.Repository;
 
+import com.zyzf.polymer.pay.common.core.dao.impl.BaseDaoImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsOperatorLogDao;
 import com.zyzf.polymer.pay.permission.entity.PmsOperatorLog;
 
@@ -28,6 +29,6 @@ import com.zyzf.polymer.pay.permission.entity.PmsOperatorLog;
  * 
  */
 @Repository
-public class PmsOperatorLogDaoImpl extends PermissionBaseDaoImpl<PmsOperatorLog> implements PmsOperatorLogDao {
+public class PmsOperatorLogDaoImpl extends BaseDaoImpl<PmsOperatorLog> implements PmsOperatorLogDao {
 
 }

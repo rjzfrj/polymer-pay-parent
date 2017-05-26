@@ -3,7 +3,7 @@ package com.zyzf.polymer.pay.permission.dao;
 import java.util.List;
 
 import com.zyzf.polymer.pay.permission.entity.PmsPermission;
-
+import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 /**
  * 权限点dao
  *
@@ -11,7 +11,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsPermission;
  * 
  * 
  */
-public interface PmsPermissionDao extends PermissionBaseDao<PmsPermission> {
+public interface PmsPermissionDao extends BaseDao<PmsPermission> {
 	/**
 	 * 根据实体ID集字符串获取对象列表.
 	 * 

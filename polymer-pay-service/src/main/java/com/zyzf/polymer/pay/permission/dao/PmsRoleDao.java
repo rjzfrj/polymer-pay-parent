@@ -2,6 +2,7 @@ package com.zyzf.polymer.pay.permission.dao;
 
 import java.util.List;
 
+import com.zyzf.polymer.pay.common.core.dao.BaseDao;
 import com.zyzf.polymer.pay.permission.entity.PmsRole;
 
 /**
@@ -11,7 +12,7 @@ import com.zyzf.polymer.pay.permission.entity.PmsRole;
  * 
  * 
  */
-public interface PmsRoleDao extends PermissionBaseDao<PmsRole> {
+public interface PmsRoleDao extends BaseDao<PmsRole> {
 
 	/**
 	 * 获取所有角色列表，以供添加操作员时选择.

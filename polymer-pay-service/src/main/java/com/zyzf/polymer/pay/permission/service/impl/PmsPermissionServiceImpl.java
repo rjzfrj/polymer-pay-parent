@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.zyzf.polymer.pay.common.core.page.PageBean;
 import com.zyzf.polymer.pay.common.core.page.PageParam;
+import com.zyzf.polymer.pay.common.core.service.impl.BaseServiceImpl;
 import com.zyzf.polymer.pay.permission.dao.PmsPermissionDao;
 import com.zyzf.polymer.pay.permission.dao.PmsRolePermissionDao;
 import com.zyzf.polymer.pay.permission.entity.PmsPermission;
@@ -23,7 +24,7 @@ import com.zyzf.polymer.pay.permission.service.PmsPermissionService;
  * 
  */
 @Service("pmsPermissionService")
-public class PmsPermissionServiceImpl implements PmsPermissionService {
+public class PmsPermissionServiceImpl extends BaseServiceImpl<PmsPermission> implements PmsPermissionService {
 	@Autowired
 	private PmsPermissionDao zyppPermissionDao;
 	@Autowired
