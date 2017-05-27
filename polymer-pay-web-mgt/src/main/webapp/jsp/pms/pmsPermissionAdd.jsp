@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="../../common/taglib/taglib.jsp"%>
 <div class="pageContent">
-	<form id="form1" method="post" action="${baseURL}/pms/permission/add" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxDone);">
+	<form id="form1" method="post" action="${baseURL}/pms/permission/add" class="pageForm required-validate" 
+	onsubmit="return validateCallback(this, dialogAjaxDone);">
 		<div class="pageFormContent" layoutH="58">
 			<input type="hidden" name="navTabId" value="qxgl">
 			<input type="hidden" name="callbackType" value="closeCurrent">
