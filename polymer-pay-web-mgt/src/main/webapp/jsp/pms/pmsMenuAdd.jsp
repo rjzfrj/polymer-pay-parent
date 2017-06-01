@@ -15,9 +15,18 @@
 				<span class="info"></span>
 			</p>
 			<p style="width: 99%">
+				<label>是否有叶子节点：</label>
+				<select name=isLeaf class="required combox">
+					<option value="NO">-默认(无)-</option>
+					<option value="YES">-有-</option>
+					<option value="NO">-无-</option>
+				</select>
+			</p>
+			<p style="width: 99%">
 				<label>菜单名称：</label>
 				<input type="text" name="name" class="required" maxlength="90" value="${pmsMenu.name}" />
 			</p>
+			
 			<p style="width: 99%">
 				<label>菜单编号：</label>
 				<input type="text" name="num" class="required number" maxlength="20" value="${pmsMenu.num}" />

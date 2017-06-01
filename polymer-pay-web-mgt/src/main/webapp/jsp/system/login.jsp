@@ -11,12 +11,12 @@
 
 <body>
 	<div id="login">
-		<div id="login_header">
-			<h1 class="login_logo">
+		<%-- <div id="login_header">
+			 <h1 class="login_logo">
 				<a href="http://demo.dwzjs.com">
 					<img src="${baseURL }/dwz/themes/default/images/login_logo.png" />
 				</a>
-			</h1>
+			</h1> 
 			<div class="login_headerContent">
 				<div class="navList">
 					<ul>
@@ -25,11 +25,11 @@
 						</li>
 					</ul>
 				</div>
-				<h2 class="login_title">
+				 <h2 class="login_title">
 					<img src="${baseURL }/dwz/themes/default/images/login_title.png" />
-				</h2>
+				</h2> 
 			</div>
-		</div>
+		</div> --%>
 		<div id="login_content">
 			<div class="loginForm">
 				<form id="form1" action="${baseURL }/login" method="post">
@@ -76,19 +76,19 @@
 
 
 			</div>
-			<div class="login_banner">
+			<%-- <div class="login_banner">
 				<img src="${baseURL }/dwz/themes/default/images/login_banner.jpg" />
-			</div>
-			<div class="login_main">
+			</div> --%>
+			<!-- <div class="login_main">
 				<ul class="helpList">
 				</ul>
 				<div class="login_inner"></div>
-			</div>
+			</div> -->
 		</div>
-		<div id="login_footer">
+		<!-- <div id="login_footer">
 			Copyright &copy; 2015-2016
 			<a href="http://" target="_blank"></a>
-		</div>
+		</div> -->
 	</div>
 
 	<script>

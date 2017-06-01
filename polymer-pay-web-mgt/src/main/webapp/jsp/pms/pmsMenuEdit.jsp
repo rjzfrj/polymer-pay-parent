@@ -18,6 +18,13 @@
 				<span class="info"></span>
 			</p>
 			<p style="width: 99%">
+				<label>是否是叶子节点：</label>
+				<select name="isLeaf" class="required combox">
+					<option value="NO" <c:if test="${'NO' == pmsMenu.isLeaf}">selected="selected"</c:if>>-NO-</option>
+					<option value="YES" <c:if test="${'YES' == pmsMenu.isLeaf}">selected="selected"</c:if>>-YES-</option>
+				</select>
+			</p>
+			<p style="width: 99%">
 				<label>菜单名称：</label>
 				<input type="text" name="name" class="required" maxlength="90" value="${pmsMenu.name }" size="30" />
 			</p>
